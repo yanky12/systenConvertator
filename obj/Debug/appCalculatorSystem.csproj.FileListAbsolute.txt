@@ -1,0 +1,11 @@
+C:\VS projects\appCalculatorSystem\bin\Debug\appCalculatorSystem.exe.config
+C:\VS projects\appCalculatorSystem\bin\Debug\appCalculatorSystem.exe
+C:\VS projects\appCalculatorSystem\bin\Debug\appCalculatorSystem.pdb
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.csproj.AssemblyReference.cache
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.csproj.SuggestedBindingRedirects.cache
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.Form1.resources
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.Properties.Resources.resources
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.csproj.GenerateResource.cache
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.csproj.CoreCompileInputs.cache
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.exe
+C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.pdb
