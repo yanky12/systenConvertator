@@ -30,6 +30,7 @@ namespace appCalculatorSystem
             if (b.Text == "C")
             {
                 textBox1.Text = "";
+                textBox2.Text = "";
             }
             else
             {
@@ -87,8 +88,6 @@ namespace appCalculatorSystem
             {
                 
             }
-
-            
 
         }
         public void DoConvertation()
@@ -186,10 +185,11 @@ namespace appCalculatorSystem
                 textBox1.Select(textBox1.Text.Length, 0);
             }
         }
-
+        // кнопка Clear
         private void button19_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
+            textBox2.Text = "";
             textBox1.Focus();
         }
 
