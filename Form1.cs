@@ -13,6 +13,7 @@ namespace appCalculatorSystem
     public partial class Form1 : Form
     {
         bool wait = false;
+        string wasSelected = "10";
         Convertator convertator = new Convertator();
         char[] values = { '0', '1', '2', '3', '4', '5', '6', '7',
             '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
@@ -59,21 +60,10 @@ namespace appCalculatorSystem
 
             if (!Char.IsDigit(c) && !Char.IsControl(c) || (c == '0' && textBox1.Text.Length == 0))
                 e.Handled = true;
-            /*
-            if (!Char.IsControl(c))
-            {
-                e.Handled= true;
-                foreach (var char_ in textBox1.Text)
-                {
-                    
-                }
-            }
-            */
-                // if (c == '0' && textBox1.Text.Length == 0)
-                //   e.Handled = true;
+            
             if ((c >= 65 && c <= 70) || (c >= 97 && c <= 102))
                 e.Handled = false;
-            
+
 
             char[] values = { '0', '1', '2', '3', '4', '5', '6', '7',
             '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
@@ -85,7 +75,6 @@ namespace appCalculatorSystem
             {
                 if (c == values[i] || c == valuesLowers[i])
                     e.Handled |= true;
-             
             }
         }
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -93,8 +82,13 @@ namespace appCalculatorSystem
             if (e.KeyData == (Keys.Control | Keys.Back))
             {
                 (sender as TextBox).Clear();
+            }
+            if (e.KeyData == (Keys.Control | Keys.V))
+            {
                 
             }
+
+            
 
         }
         public void DoConvertation()
@@ -152,8 +146,14 @@ namespace appCalculatorSystem
             for (int i = chosen; i < buttons.Length; i++)
             {
                 buttons[i].Enabled = false;
-
             }
+            if (isAvailaible() == false)
+            {
+                comboBox1.SelectedItem = wasSelected;
+                MessageBox.Show("Введённое значение больше максимального значения СС.", "Ошибочка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            wasSelected = comboBox1.SelectedItem.ToString();
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,6 +174,17 @@ namespace appCalculatorSystem
 
             textBox1.Text = textBox1.Text.ToUpper();
             textBox1.Select(textBox1.Text.Length, 0);
+
+            string copyText = Clipboard.GetText();
+            int copyTextlength = copyText.Length;
+            int indexRemove = textBox1.Text.Length - copyTextlength;
+            wasSelected = comboBox1.SelectedItem.ToString();
+            if (isAvailaible() == false)
+            {
+                textBox1.Text = textBox1.Text.Remove(indexRemove, copyTextlength);
+                MessageBox.Show("Вставленное значение больше максимального значения СС.", "Ошибочка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Select(textBox1.Text.Length, 0);
+            }
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -198,6 +209,26 @@ namespace appCalculatorSystem
         private void button16_EnabledChanged(object sender, EventArgs e)
         {
             
+        }
+        public bool isAvailaible()
+        {
+            // преверка на то, будет ли являтся каждый символ тексбокса меньше макс значения СС
+            Dictionary<char, int> dick = new Dictionary<char, int>() { { 'A', 10 }, { 'B', 11}, { 'C', 12 },
+            { 'D', 13 }, { 'E', 14 }, { 'F', 15 } };
+            foreach (char c in textBox1.Text)
+            {
+                int number;
+                if (c >= 'A' && c <= 'F')
+                    number = dick[c];
+                else
+                    number = int.Parse(c.ToString());
+                
+                if (number >= Convert.ToInt32(comboBox1.SelectedItem))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

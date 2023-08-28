@@ -9,3 +9,14 @@ C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.csproj.Generate
 C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.csproj.CoreCompileInputs.cache
 C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.exe
 C:\VS projects\appCalculatorSystem\obj\Debug\appCalculatorSystem.pdb
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\bin\Debug\appCalculatorSystem.exe.config
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\bin\Debug\appCalculatorSystem.exe
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\bin\Debug\appCalculatorSystem.pdb
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.csproj.AssemblyReference.cache
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.csproj.SuggestedBindingRedirects.cache
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.Form1.resources
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.Properties.Resources.resources
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.csproj.GenerateResource.cache
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.csproj.CoreCompileInputs.cache
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.exe
+D:\РАБОЧИЙ СТОЛ 2\C# (Sharp)\systenConvertator\obj\Debug\appCalculatorSystem.pdb
