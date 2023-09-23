@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,7 +55,7 @@ namespace appCalculatorSystem
             textBox1.Focus();
             textBox1.Select(textBox1.Text.Length, 0);
         }
-       
+       // нажатие клавишы
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Char c = e.KeyChar;
@@ -229,7 +230,7 @@ namespace appCalculatorSystem
                 }
             }
             return true;
-        }
+        }  
     }
 }
 
